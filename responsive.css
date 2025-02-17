@@ -1,19 +1,116 @@
-@media screen and (max-width: 1000px){
-    p {
-        font-size: 0.9rem;
-        line-height: 1.8rem;
+/* Default Styles (for larger screens like laptops and desktops) */
+body {
+    font-family: "Roboto", sans-serif;
+    background: url('background.jpg') no-repeat center center fixed, 
+                linear-gradient(to bottom, rgb(45, 61, 131) 35%, rgb(63, 84, 150) 45%, rgb(76, 96, 184) 55%, 
+                               rgb(105, 134, 212) 65%, rgb(153, 171, 252) 75%, rgb(165, 181, 253) 85%);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.main-container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+}
+
+.logo {
+    font-size: 2rem;
+}
+
+#hero {
+    height: 720px;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+}
+
+/* Mobile Responsiveness (for smaller screens like phones) */
+@media screen and (max-width: 600px) {
+    body {
+        background-attachment: scroll; /* Disable fixed background for mobile */
+    }
+
+    .main-container {
+        width: 100%; /* Full width on small screens */
+        padding: 0 1rem;
+    }
+
+    .nav {
+        flex-direction: column; /* Stack logo and nav items */
+        align-items: center;
+    }
+
+    nav ul {
+        display: none; /* Hide nav items on small screens */
+    }
+
+    .burger {
+        display: block; /* Show burger menu */
+    }
+
+    #hero {
+        height: auto; /* Adjust height for smaller screens */
+        padding: 2rem 0;
+    }
+
+    .hero-name {
+        font-size: 1.5rem; /* Adjust hero title size */
+    }
+
+    .pre-title {
+        font-size: 0.8rem; /* Adjust subtitle size */
     }
 }
 
-@media screen and (ax-width: 825px) {
- .burger {
-    display: block;
-    cursor: pointer;
- }
+/* Tablet Responsiveness (for medium screens like tablets) */
+@media screen and (max-width: 768px) {
+    .main-container {
+        width: 100%; /* Full width on tablet */
+    }
+
+    .nav ul {
+        display: flex;
+        flex-direction: column; /* Stack nav items vertically */
+        gap: 1rem;
+    }
+
+    .burger {
+        display: block; /* Show burger menu */
+    }
+
+    #hero {
+        height: auto; /* Adjust height for tablet */
+    }
+
+    .hero-name {
+        font-size: 1.8rem; /* Adjust hero title size */
+    }
 }
 
-@media screen and (ax-width: 640px) {
+/* Laptop Responsiveness (for wider screens like laptops) */
+@media screen and (max-width: 1024px) {
+    .main-container {
+        width: 90%; /* Adjust container width for laptops */
+    }
 
+    .nav ul {
+        gap: 2rem; /* Reduce gap for laptop */
+    }
+
+    #hero {
+        height: 600px; /* Adjust hero height */
+    }
 }
-
-
