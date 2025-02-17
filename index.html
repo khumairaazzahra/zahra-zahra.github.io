@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        /* Kotak 1 */
-        .kotak {
+        .kotak 
+        {
             position: absolute;
             top: 0;
             left: 0;
@@ -16,88 +16,78 @@
             display: flex;
             gap: 90px;
             justify-content: flex-end;
+            padding-right: 50px;
             align-items: center;
             font-size: 24px;
             font-weight: bold;
             color: white;
-            padding-right: 50px;
         }
-
-        /* Kotak 2 */
-        .kotak2 {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 150px;
-            background-color: rgb(8, 13, 43);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 24px;
-            color: white;
-            font-family: 'Calibri', sans-serif;
-        }
-
-        /* Body */
-        body {
+        body 
+        {
+            position: relative;
             min-height: 100vh;
             background: linear-gradient(to bottom,rgb(45, 61, 131) 35%, rgb(63, 84, 150) 45%, rgb(76, 96, 184) 55%, 
             rgb(105, 134, 212) 65%, rgb(153, 171, 252) 75%, rgb(165, 181, 253) 85%);
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
         }
-
-        /* Paragraf */
-        p {
+        span 
+        {
+            display: block;
+            font-size: 90px;
+            
+        }
+        p
+        {
             text-align: center;
             font-size: 45px;
             font-weight: bold;
             color: aliceblue;
-            width: 100%;
         }
-
-        /* Media Queries untuk tampilan ponsel */
         @media (max-width: 768px) {
-            /* Mengatur kotak agar tidak penuh di ponsel */
-            .kotak, .kotak2 {
-                width: 100%;
-                height: auto;
-            }
-
-            /* Menyesuaikan ukuran font di ponsel */
-            .kotak p {
-                font-size: 20px;
-                text-align: center;
-            }
-
-            .kotak2 {
-                font-size: 18px;
-            }
-
-            /* Menata kotak secara vertikal di ponsel */
             .kotak {
-                flex-direction: column;
-                align-items: center;
+                flex-direction: column; /* Agar kotak konten vertikal pada ponsel */
+                padding: 10px;
+            }
+
+            .kotak p {
+                font-size: 20px; /* Ukuran font lebih kecil pada ponsel */
+            }
+
+            span {
+                font-size: 50px; /* Ukuran font lebih kecil pada ponsel */
+            }
+
+            p {
+                font-size: 30px; /* Ukuran font lebih kecil di ponsel */
+            }
+        }
+        @media (min-width: 769px) {
+            .kotak {
+                width: 100%; /* Lebar kotak lebih kecil di laptop */
+                padding: 0 50px;
+            }
+
+            p {
+                font-size: 40px; /* Ukuran font lebih besar di laptop */
+            }
+
+            span {
+                font-size: 80px; /* Ukuran font lebih besar di laptop */
             }
         }
     </style>
 </head>
 <body>
-    <div class="kotak">
-        <p>HOME</p>
-        <p>ABOUT ME</p>
-        <p>CONTACT US</p>
+    ,<div class="kotak">
+        <p> HOME</p>
+        <p> ABOUT ME</p>
+        <p> CONTACT ME</p>
     </div>
-
     <p>
-        <span>HELLO</span>
-        <span>Selamat Datang di Website Saya!!</span>
-    </p>
-
-    <div class="kotak2">Khumaira Azzahra Yarman | Teknik Informatika A</div>
+        <span> HELLO</span>
+        <span> Selamat Datang di Website Saya!!</span>
+    <p>
 </body>
-</html>
-
+</html> 
