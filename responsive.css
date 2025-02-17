@@ -1,0 +1,19 @@
+@media screen and (max-width: 1000px){
+    p {
+        font-size: 0.9rem;
+        line-height: 1.8rem;
+    }
+}
+
+@media screen and (ax-width: 825px) {
+ .burger {
+    display: block;
+    cursor: pointer;
+ }
+}
+
+@media screen and (ax-width: 640px) {
+
+}
+
+
